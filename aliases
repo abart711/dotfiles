@@ -13,7 +13,7 @@ alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
 alias so='source ~/Developer/abart711/dotfiles/aliases'
-alias aa='subl  ~/Developer/abart711/dotfiles/aliases'
+alias aa='vim  ~/Developer/abart711/dotfiles/aliases'
 
 # git
 alias gci="git pull --rebase && rake && git push"
@@ -21,6 +21,10 @@ alias gad='git add --all .'
 alias gca='git commit -a'
 alias gcm="git commit -m"
 alias gp="git push"
+
+#Vimrc
+alias vrc="vim ~/Developer/abart711/dotfiles/vimrc"
+alias vrb="vim ~/Developer/abart711/dotfiles/vimrc.bundles"
 
 # Bundler
 alias b="bundle"
@@ -35,6 +39,8 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 alias z="zeus"
+alias zs='z start'
+alias zr='rm .zeus.sock'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
