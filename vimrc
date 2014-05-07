@@ -4,6 +4,8 @@
 
 " Leader
 let mapleader = " "
+map <Leader>gs :Gstatus<CR>
+map <Leader>ga :!git add .<cr>
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
