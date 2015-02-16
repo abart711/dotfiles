@@ -21,6 +21,8 @@ alias gad='git add --all .'
 alias gca='git commit -a'
 alias gcm="git commit -m"
 alias gp="git push"
+alias gr='git reflog'
+alias gcb='git co -b $1'
 
 #Vimrc
 alias vrc="vim ~/Developer/abart711/dotfiles/vimrc"
@@ -41,6 +43,22 @@ alias s="rspec"
 alias z="zeus"
 alias zs='z start'
 alias zr='rm .zeus.sock'
+alias rc='rails console'
+alias rr='rake routes'
+
+# POW
+alias pr="touch ~/.pow/restart.txt"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+#Tmux
+alias ta='tmux attach -t $1'
+alias tl='tmux list-sessions'
+
+#Mysql
+alias mss='mysql.server start'
+
+alias zs='zeus start'
+alias zr='rm .zeus.sock'
+

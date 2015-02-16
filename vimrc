@@ -6,6 +6,8 @@
 let mapleader = " "
 map <Leader>gs :Gstatus<CR>
 map <Leader>ga :!git add .<cr>
+map <Leader>m :Rmodel
+map <Leader>c :Rcontroller
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
@@ -119,12 +121,10 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
+let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-
-" Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
 
 " Treat <li> and <p> tags like the block tags they are
@@ -147,3 +147,5 @@ let g:syntastic_check_on_open=1
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+execute pathogen#infect()

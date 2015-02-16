@@ -11,6 +11,10 @@ export PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
+# cd path 
+setopt auto_cd
+cdpath=($HOME/Developer)
+
 # completion
 autoload -U compinit
 compinit
@@ -75,5 +79,12 @@ export PATH=".git/safe/../../bin:$PATH"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+#Gulp
+export PATH=/usr/local/bin/npm/:$PATH
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+PATH=$PATH:$HOME/.rvm/bin
